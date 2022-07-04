@@ -33,9 +33,7 @@ class GsSpider(scrapy.Spider):
             # next_url = 'https://www.gushiwen.cn' + next_href[0]  # URL第一种补全方式
             next_url = response.urljoin(next_href)  # URL第二种补全方式(urljoin可以进行URL地址的补全)
             yield scrapy.Request(next_url)  # 爬虫程序重新通过 爬虫引擎 调度器 下载器 请求下一页的数据
-            # yield scrapy.Request(url=next_url, callback=self.parse)  # 或者这种方式请求
-            # yield scrapy.Request(url=next_url, callback=self.parse)  # 或者这种方式请求
-            # yield scrapy.Request(url=next_url, callback=self.parse)  # 或者这种方式请求
+
 
 
 
